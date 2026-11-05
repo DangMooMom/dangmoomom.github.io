@@ -125,10 +125,10 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 /* Text section: title column + body column, divider on top */
 .sec { padding: 0 var(--gutter); max-width: calc(var(--max) + var(--gutter) * 2); margin: 0 auto; }
 .sec__inner { display: flex; gap: 80px; border-top: 1px solid var(--divider); padding-top: 40px; }
-.sec__title { flex: 1 1 0; min-width: 0; }
-.sec__body { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 40px; }
+.sec__title { flex: 1 1 0; min-width: 0; font-size: 37px; line-height: 1.1; letter-spacing: -0.03em; }
+.sec__body { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
 .sec__body > * { max-width: 520px; }
-.sec--key .sec__title { font-size: 37px; letter-spacing: -0.03em; }
+.sec--key .sec__body { gap: 40px; }
 .sec--pb40 { padding-bottom: 40px; }
 .sec--pb80 { padding-bottom: 80px; }
 .key { display: flex; flex-direction: column; gap: 8px; }
@@ -318,7 +318,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
   :root, .home { --gutter: 20px; }
   body { font-size: 18px; }
   .h1 { font-size: 44px; }
-  .h2, .sec--key .sec__title { font-size: 30px; }
+  .h2, .sec__title { font-size: 30px; }
   .h3 { font-size: 24px; }
   .h4 { font-size: 20px; }
   .nav__links { gap: 24px; }
