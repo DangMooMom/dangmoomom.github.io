@@ -173,21 +173,6 @@ document.querySelectorAll('[data-carousel]').forEach((root) => {
   update();
 });
 
-// Reading progress bar on project pages
-(() => {
-  if (!document.querySelector('.p-title')) return;
-  const bar = document.createElement('div');
-  bar.className = 'progress';
-  bar.setAttribute('aria-hidden', 'true');
-  document.body.append(bar);
-  const onScroll = () => {
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    bar.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
-  };
-  window.addEventListener('scroll', () => requestAnimationFrame(onScroll), { passive: true });
-  onScroll();
-})();
-
 // Back to top button
 (() => {
   const btn = document.createElement('button');

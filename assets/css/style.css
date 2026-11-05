@@ -296,8 +296,6 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 .to-top.is-visible { opacity: 1; pointer-events: auto; transform: none; }
 .to-top:hover { background: var(--text); color: #fff; border-color: var(--text); }
 
-/* Reading progress on project pages */
-.progress { position: fixed; left: 0; top: 0; z-index: 11; height: 2px; width: 100%; background: var(--point); transform: scaleX(0); transform-origin: left; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
