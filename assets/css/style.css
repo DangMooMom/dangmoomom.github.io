@@ -113,7 +113,9 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 .p-summary { display: flex; gap: 80px; padding-top: 40px; padding-bottom: 99px; }
 .p-summary__main { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 40px; }
 .p-summary__text { display: flex; flex-direction: column; gap: 1.3em; font-size: 30px; }
-.p-summary__meta { flex: 1 1 0; display: flex; flex-direction: column; gap: 40px; justify-content: center; }
+.p-summary__meta { flex: 1 1 0; display: flex; flex-direction: column; gap: 40px; justify-content: flex-start; }
+/* Line up the cap tops of the summary and the first meta label */
+.p-summary__text > :first-child, .p-summary__meta > :first-child > :first-child { text-box: trim-start cap alphabetic; }
 .p-summary__meta div { display: flex; flex-direction: column; gap: 8px; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip {
