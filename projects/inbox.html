@@ -79,7 +79,10 @@
           <p class="chapter__label">01</p>
           <h2 class="chapter__title">Logic before interface</h2>
         </div>
-        <p class="chapter__body">Updates had to follow how trade workflows connect. So I built the notification logic on three questions before choosing any interface pattern. Where did it happen? What changed? Who should know? Each answer maps to a backend event trigger.</p>
+        <div class="chapter__body">
+          <p>The service kept adding features that mirrored real trade workflows. An update in one place often mattered to someone working in another, so notifications had to follow how those workflows connect. Before choosing any interface pattern, I built the notification logic on three questions. Where did it happen? What changed? Who should know? Each answer maps to a backend event trigger, so the same logic can scale as features are added.</p>
+          <p>Linked workflows made it harder. Request for quotation and purchase quotation depend on each other, so one action can matter to the people in charge of both. Each notification was defined by object, trigger and recipient, then branched by object state.</p>
+        </div>
       </div>
     </section>
 
@@ -90,6 +93,7 @@
     <div class="captions">
       <div class="caption">
         <p class="caption__title">Three questions behind every notification</p>
+        <p class="caption__body">Each question maps to a backend event trigger, from the workflow it belongs to down to who can be designated as a recipient.</p>
       </div>
     </div>
 
@@ -100,7 +104,7 @@
     <div class="captions pb120">
       <div class="caption">
         <p class="caption__title">28 cases in one workflow</p>
-        <p class="caption__body">Request for quotation and purchase quotation depend on each other. Every possible combination was mapped in a spreadsheet and narrowed down to 28 cases for purchase quotations alone.</p>
+        <p class="caption__body">Allocating a purchase quotation to a request, for example, notifies the people in charge of both. Every possible combination was mapped in a spreadsheet and narrowed down to 28 cases for the purchase quotation workflow alone.</p>
       </div>
     </div>
 
@@ -110,7 +114,10 @@
           <p class="chapter__label">02</p>
           <h2 class="chapter__title">Making the logic visible</h2>
         </div>
-        <p class="chapter__body">Each message says who did what and links straight to the task, so users can act on it right away. Data masking hides details users aren't authorised to see. New updates load only when users refresh, so edits in progress aren't overwritten.</p>
+        <div class="chapter__body">
+          <p>The notification rules shape every message in the inbox. Each one says who did what and links straight to the task, so users can act on it right away. When workflows are connected, a message links to both tasks. Data masking hides details users aren't authorised to see.</p>
+          <p>The service doesn't sync in real time, because an incoming update could overwrite someone's edit in progress. So new updates load only when users refresh, and a banner lets them know something has arrived.</p>
+        </div>
       </div>
     </section>
 
@@ -121,7 +128,7 @@
     <div class="captions pb120">
       <div class="caption">
         <p class="caption__title">Refresh to update</p>
-        <p class="caption__body">A banner tells users about new notifications without replacing what they are working on.</p>
+        <p class="caption__body">A banner tells users about new notifications without replacing what they are working on. They can also filter the inbox to unread notifications only.</p>
       </div>
     </div>
 
@@ -131,7 +138,10 @@
           <p class="chapter__label">Results</p>
           <h2 class="chapter__title">Testing accuracy in real scenarios</h2>
         </div>
-        <p class="chapter__body">Access in the system depends on each person's role. I ran a role-play pilot with the project team, each of us acting as a different role in real trade tasks. Every notification followed its trigger and recipient rules. With real users, the next step is to track how quickly people act on a notification and which ones get ignored.</p>
+        <div class="chapter__body">
+          <p>Access in the system depends on each person's role. I ran a role-play pilot with the project team, each of us acting as a different role in real trade tasks. The goal was to check that every notification reached the right person. Every one followed its trigger and recipient rules, and none were missed or sent twice. In shared cases such as quotations, the wording fitted each recipient's role.</p>
+          <p>With real users, the next step is to measure it in daily work. Clicks from the inbox to the linked task would show how quickly people act. Notifications marked as read without opening would point to noise, and follow-up interviews would show whether people still ask colleagues for updates.</p>
+        </div>
       </div>
     </section>
 
