@@ -64,7 +64,7 @@
       </div>
     </section>
 
-    <section class="sec sec--key">
+    <section class="sec sec--key pb120">
       <div class="sec__inner">
         <h2 class="sec__title">Solution</h2>
         <div class="sec__body">
@@ -73,66 +73,74 @@
       </div>
     </section>
 
-    <div class="media media--diagram">
+    <section class="chapter">
+      <div class="chapter__inner">
+        <div class="chapter__head">
+          <p class="chapter__label">01</p>
+          <h2 class="chapter__title">Logic before interface</h2>
+        </div>
+        <p class="chapter__body">Updates had to follow how trade workflows connect. So I built the notification logic on three questions before choosing any interface pattern. Where did it happen? What changed? Who should know? Each answer maps to a backend event trigger.</p>
+      </div>
+    </section>
+
+    <div class="media pt40 pb0">
       <div class="frame"><img src="../images/inbox/logic.png" alt="Three questions that map each notification to a backend event trigger." loading="lazy"></div>
     </div>
 
-    <section class="sec sec--pb80">
-      <div class="sec__inner">
-        <h2 class="sec__title">Notification logic</h2>
-        <div class="sec__body">
-          <p class="h3">Designing who gets what, when</p>
-          <p class="body">To reflect how workflows connect, I built the notification logic on three questions. Where did it happen? What changed? Who should know? Each answer maps to a backend event trigger.</p>
-        </div>
+    <div class="captions">
+      <div class="caption">
+        <p class="caption__title">Three questions behind every notification</p>
       </div>
-    </section>
+    </div>
 
-    <section class="sec">
-      <div class="sec__inner">
-        <h2 class="sec__title">Notification cases</h2>
-        <div class="sec__body">
-          <p class="h3">28 cases in one workflow</p>
-          <p class="body">The request for quotation and purchase quotation workflows depend on each other. Each notification was defined by object, trigger and recipient. It then branched by object state. I mapped every possible combination in a spreadsheet and narrowed it down to 28 cases for the purchase quotation workflow alone.</p>
-        </div>
-      </div>
-    </section>
-
-    <div class="media media--diagram">
+    <div class="media pt80 pb0">
       <div class="frame frame--auto frame--white"><img src="../images/inbox/cases.png" alt="Notification case table with triggers, recipients, sending conditions and message templates." loading="lazy"></div>
     </div>
 
-    <section class="sec">
-      <div class="sec__inner">
-        <h2 class="sec__title">Inbox interface</h2>
-        <div class="sec__body">
-          <p class="h3">Making the logic visible</p>
-          <p class="body">Each message says who did what and links straight to the task, so users can act on it right away. Data masking hides details users aren't authorised to see. New updates load only when users refresh, so edits in progress aren't overwritten.</p>
+    <div class="captions pb120">
+      <div class="caption">
+        <p class="caption__title">28 cases in one workflow</p>
+        <p class="caption__body">Request for quotation and purchase quotation depend on each other. Every possible combination was mapped in a spreadsheet and narrowed down to 28 cases for purchase quotations alone.</p>
+      </div>
+    </div>
+
+    <section class="chapter">
+      <div class="chapter__inner">
+        <div class="chapter__head">
+          <p class="chapter__label">02</p>
+          <h2 class="chapter__title">Making the logic visible</h2>
         </div>
+        <p class="chapter__body">Each message says who did what and links straight to the task, so users can act on it right away. Data masking hides details users aren't authorised to see. New updates load only when users refresh, so edits in progress aren't overwritten.</p>
       </div>
     </section>
 
-    <div class="media">
+    <div class="media pt40 pb0">
       <div class="frame"><img src="../images/inbox/mobile.png" alt="Inbox on mobile with a refresh banner and unread notifications." loading="lazy"></div>
     </div>
 
-    <section class="sec sec--pb80">
-      <div class="sec__inner">
-        <h2 class="sec__title">Usability testing</h2>
-        <div class="sec__body">
-          <p class="h3">Testing accuracy and context in real scenarios</p>
-          <p class="body">Access in the system depends on each person's role. I ran a role-play pilot with the project team, each of us acting as a different role in real trade tasks. Every notification followed its trigger and recipient rules. None were missed or sent twice.</p>
+    <div class="captions pb120">
+      <div class="caption">
+        <p class="caption__title">Refresh to update</p>
+        <p class="caption__body">A banner tells users about new notifications without replacing what they are working on.</p>
+      </div>
+    </div>
+
+    <section class="chapter">
+      <div class="chapter__inner">
+        <div class="chapter__head">
+          <p class="chapter__label">Results</p>
+          <h2 class="chapter__title">Testing accuracy in real scenarios</h2>
         </div>
+        <p class="chapter__body">Access in the system depends on each person's role. I ran a role-play pilot with the project team, each of us acting as a different role in real trade tasks. Every notification followed its trigger and recipient rules. With real users, the next step is to track how quickly people act on a notification and which ones get ignored.</p>
       </div>
     </section>
 
-    <section class="sec">
-      <div class="sec__inner">
-        <h2 class="sec__title">Next plan</h2>
-        <div class="sec__body">
-          <p class="h3">Measuring it in real use</p>
-          <p class="body">With real users, I would track how quickly people act on a notification, which ones get ignored, and whether they still ask colleagues for updates.</p>
-        </div>
+    <section class="stats" aria-label="Results">
+      <div class="stats__row">
+        <div class="stat"><p class="stat__num">28</p><p class="stat__label">Notification cases for purchase quotations</p></div>
+        <div class="stat"><p class="stat__num">0</p><p class="stat__label">Missed or duplicated notifications in the pilot</p></div>
       </div>
+      <p class="stats__note">Role-play pilot with the project team</p>
     </section>
 
     <section class="others">

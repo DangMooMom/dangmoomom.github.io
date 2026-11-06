@@ -161,6 +161,34 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 .split__text { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 40px; }
 .split__text > * { max-width: 520px; }
 
+/* Chapters: one divider per chapter, title beside a short read */
+.chapter { padding: 0 var(--gutter) 40px; max-width: calc(var(--max) + var(--gutter) * 2); margin: 0 auto; }
+.chapter__inner { display: flex; gap: 80px; border-top: 1px solid var(--divider); padding-top: 40px; }
+.chapter__head { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.chapter__label { font-size: 16px; font-weight: 600; line-height: 1; letter-spacing: -0.03em; color: var(--text-muted); }
+.chapter__title { font-family: var(--font-display); font-size: 64px; font-weight: 400; line-height: 1; letter-spacing: -0.05em; }
+.chapter__body { flex: 1 1 0; min-width: 0; font-size: 24px; line-height: 1.3; letter-spacing: -0.02em; }
+
+/* Captions under images */
+.captions { display: flex; gap: 40px; padding: 24px var(--gutter) 0; max-width: calc(var(--max) + var(--gutter) * 2); margin: 0 auto; }
+.caption { width: 560px; max-width: 100%; display: flex; flex-direction: column; gap: 8px; }
+.captions--two .caption { width: 580px; }
+.caption__title { font-size: 24px; font-weight: 500; line-height: 1.1; letter-spacing: -0.03em; }
+.caption__body { font-size: 20px; line-height: 1.31; letter-spacing: -0.03em; color: var(--text-muted); }
+.split > .caption { flex: 1 1 0; }
+
+/* Results numbers */
+.stats { padding: 60px var(--gutter) 80px; max-width: calc(var(--max) + var(--gutter) * 2); margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+.stats__row { display: flex; gap: 40px; }
+.stat { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 12px; }
+.stat__num { font-family: var(--font-display); font-size: 64px; line-height: 1; letter-spacing: -0.05em; }
+.stat__label { font-size: 20px; line-height: 1.31; letter-spacing: -0.03em; color: var(--text-muted); }
+.stats__note { font-size: 16px; line-height: 1.2; letter-spacing: -0.03em; color: var(--text-muted); }
+
+/* Spacing helpers taken from the Figma frames */
+.pt40 { padding-top: 40px; } .pt80 { padding-top: 80px; } .pt120 { padding-top: 120px; }
+.pb0 { padding-bottom: 0; } .pb40 { padding-bottom: 40px; } .pb120 { padding-bottom: 120px; }
+
 /* Carousel */
 .carousel { position: relative; }
 .carousel__track {
@@ -349,4 +377,18 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
   .model__name { font-size: 15px; }
   .others__grid { grid-template-columns: 1fr; gap: 32px; }
   .others__title { margin-bottom: 48px; }
+  .chapter__inner, .stats__row, .captions { flex-direction: column; }
+  .chapter__inner { gap: 24px; }
+  .chapter__head, .chapter__body, .stat { flex: none; }
+  .chapter__title, .stat__num { font-size: 44px; }
+  .chapter__body { font-size: 20px; }
+  .captions { gap: 24px; padding-top: 16px; }
+  .caption, .captions--two .caption { width: 100%; }
+  .caption__title { font-size: 20px; }
+  .caption__body, .stat__label { font-size: 18px; }
+  .stats { padding: 40px var(--gutter) 64px; }
+  .stats__row { gap: 32px; }
+  .pt40 { padding-top: 24px; } .pt80, .pt120 { padding-top: 48px; }
+  .pb40 { padding-bottom: 24px; } .pb120 { padding-bottom: 64px; }
+  .split > .caption { flex: none; width: 100%; }
 }

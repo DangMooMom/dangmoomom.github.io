@@ -47,7 +47,7 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
 // Scroll reveal for sections, images and cards
 (() => {
   const targets = document.querySelectorAll(
-    '.section-label, .card, .about__title, .about__body > *, .p-summary__main, .p-summary__meta, .sec__inner, .media, .others__title, .other, .footer__inner'
+    '.section-label, .card, .about__title, .about__body > *, .p-summary__main, .p-summary__meta, .sec__inner, .chapter__inner, .media, .captions, .stat, .others__title, .other, .footer__inner'
   );
   if (reduceMotion || !('IntersectionObserver' in window)) return;
   const io = new IntersectionObserver((entries) => {
@@ -60,9 +60,9 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
   targets.forEach((el) => {
     el.classList.add('reveal');
     // Stagger siblings that share a grid row (cards, other projects)
-    if (el.matches('.card, .other')) {
+    if (el.matches('.card, .other, .stat')) {
       const i = [...el.parentElement.children].indexOf(el);
-      el.style.transitionDelay = `${(i % 2) * 0.12}s`;
+      el.style.transitionDelay = `${(el.matches('.stat') ? i : i % 2) * 0.12}s`;
     }
     io.observe(el);
   });
