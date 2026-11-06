@@ -154,7 +154,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 }
 .media__row { display: flex; gap: 40px; }
 .media__row > .frame { flex: 1 1 0; min-width: 0; }
-.media__item { flex: 1 1 0; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 24px; }
+.media__item { flex: 1 1 0; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 40px; }
 .media__item .caption { width: auto; }
 
 /* Image + text side by side */
@@ -172,7 +172,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 .chapter__body { flex: 1 1 0; min-width: 0; font-size: 24px; line-height: 1.3; letter-spacing: -0.02em; }
 
 /* Captions under images */
-.captions { display: flex; gap: 40px; padding: 24px var(--gutter) 0; max-width: calc(var(--max) + var(--gutter) * 2); margin: 0 auto; }
+.captions { display: flex; gap: 40px; padding: 40px var(--gutter) 0; max-width: calc(var(--max) + var(--gutter) * 2); margin: 0 auto; }
 .caption { width: 560px; max-width: 100%; display: flex; flex-direction: column; gap: 8px; }
 .captions--two .caption { width: 580px; }
 .caption__title { font-size: 24px; font-weight: 500; line-height: 1.1; letter-spacing: -0.03em; }
@@ -384,13 +384,15 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
   .chapter__head, .chapter__body, .stat { flex: none; }
   .chapter__title, .stat__num { font-size: 44px; }
   .chapter__body { font-size: 20px; }
-  .captions { gap: 24px; padding-top: 16px; }
+  .captions { gap: 24px; }
+  .media__row:has(.media__item) { gap: 120px; }
   .caption, .captions--two .caption { width: 100%; }
   .caption__title { font-size: 20px; }
   .caption__body, .stat__label { font-size: 18px; }
   .stats { padding: 40px var(--gutter) 64px; }
   .stats__row { gap: 32px; }
-  .pt40 { padding-top: 24px; } .pt80, .pt120 { padding-top: 48px; }
-  .pb40 { padding-bottom: 24px; } .pb120 { padding-bottom: 64px; }
+  /* Keep the Figma rhythm on phones too: 40px inside a group, 120px between groups */
+  .pt40 { padding-top: 40px; } .pt80 { padding-top: 80px; } .pt120 { padding-top: 120px; }
+  .pb0 { padding-bottom: 0; } .pb40 { padding-bottom: 40px; } .pb120 { padding-bottom: 120px; }
   .split > .caption { flex: none; width: 100%; }
 }
