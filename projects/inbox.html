@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inbox Notification · Jihyun Hong</title>
+  <meta name="description" content="Inbox Notification at Tridge. Notification logic and one inbox that keep everyone in a trade workflow up to date.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="nav__logo" href="../">Jihyun Hong</a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="../#work">Work</a>
+      <a href="../#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="wrap p-title">
+      <div class="p-title__inner">
+        <p class="h5 muted">Tridge</p>
+        <h1 class="h1">Inbox Notification</h1>
+        <p class="h2">Keeping everyone in the loop</p>
+      </div>
+    </section>
+
+    <div class="p-cover"><img src="../images/inbox-wide.jpg" alt="A hand holding a phone that shows the inbox."></div>
+
+    <section class="wrap p-summary">
+      <div class="p-summary__main">
+        <div class="p-summary__text">
+        <p class="h3">As the service added features that mirrored real trade workflows, users found it harder to track what happened where. I proposed the inbox as one place to see every message and activity across the service.</p>
+        <p class="h3">The work started from the notification logic, not the interface.</p>
+        </div>
+        <div class="chips">
+          <span class="chip">Notification Logic</span>
+          <span class="chip">Edge Case Mapping</span>
+          <span class="chip">Multi-user Workflows</span>
+          <span class="chip">Scenario Testing</span>
+        </div>
+      </div>
+      <div class="p-summary__meta">
+        <div><p>Responsibility</p><p class="muted">Proposed the project and owned planning and design end to end</p></div>
+        <div><p>Team</p><p class="muted">Sole designer in a team of 7<br>with engineers</p></div>
+        <div><p>Timeline</p><p class="muted">May 2024</p></div>
+      </div>
+    </section>
+
+    <section class="sec sec--key sec--pb40">
+      <div class="sec__inner">
+        <h2 class="sec__title">Problem</h2>
+        <div class="sec__body">
+          <p class="body">Updates got lost across the service. Users found it harder to track what happened where.</p>
+          <div class="key">
+            <p class="small muted">Approach</p>
+            <p class="h3">Before choosing interface patterns, I defined the notification logic first.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec--key">
+      <div class="sec__inner">
+        <h2 class="sec__title">Solution</h2>
+        <div class="sec__body">
+          <p class="h3">Notification logic that scales across features and follows real trade workflows.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="media media--diagram">
+      <div class="frame"><img src="../images/inbox/logic.png" alt="Three questions that map each notification to a backend event trigger." loading="lazy"></div>
+    </div>
+
+    <section class="sec sec--pb80">
+      <div class="sec__inner">
+        <h2 class="sec__title">Notification logic</h2>
+        <div class="sec__body">
+          <p class="h3">Designing who gets what, when</p>
+          <p class="body">To reflect how workflows connect, I built the notification logic on three questions. Where did it happen? What changed? Who should know? Each answer maps to a backend event trigger.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="sec__inner">
+        <h2 class="sec__title">Notification cases</h2>
+        <div class="sec__body">
+          <p class="h3">28 cases in one workflow</p>
+          <p class="body">The request for quotation and purchase quotation workflows depend on each other. Each notification was defined by object, trigger and recipient. It then branched by object state. I mapped every possible combination in a spreadsheet and narrowed it down to 28 cases for the purchase quotation workflow alone.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="media media--diagram">
+      <div class="frame frame--auto frame--white"><img src="../images/inbox/cases.png" alt="Notification case table with triggers, recipients, sending conditions and message templates." loading="lazy"></div>
+    </div>
+
+    <section class="sec">
+      <div class="sec__inner">
+        <h2 class="sec__title">Inbox interface</h2>
+        <div class="sec__body">
+          <p class="h3">Making the logic visible</p>
+          <p class="body">Each message says who did what and links straight to the task, so users can act on it right away. Data masking hides details users aren't authorised to see. New updates load only when users refresh, so edits in progress aren't overwritten.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="media">
+      <div class="frame"><img src="../images/inbox/mobile.png" alt="Inbox on mobile with a refresh banner and unread notifications." loading="lazy"></div>
+    </div>
+
+    <section class="sec sec--pb80">
+      <div class="sec__inner">
+        <h2 class="sec__title">Usability testing</h2>
+        <div class="sec__body">
+          <p class="h3">Testing accuracy and context in real scenarios</p>
+          <p class="body">Access in the system depends on each person's role. I ran a role-play pilot with the project team, each of us acting as a different role in real trade tasks. Every notification followed its trigger and recipient rules. None were missed or sent twice.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="sec__inner">
+        <h2 class="sec__title">Next plan</h2>
+        <div class="sec__body">
+          <p class="h3">Measuring it in real use</p>
+          <p class="body">With real users, I would track how quickly people act on a notification, which ones get ignored, and whether they still ask colleagues for updates.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="others">
+      <h2 class="h1 others__title">Other Projects</h2>
+      <div class="others__grid">
+        <a class="other" href="company-directory.html">
+          <div class="other__img"><img src="../images/company-directory.jpg" alt="" loading="lazy"></div>
+          <span class="textlink">Company Directory <span class="arrow">→</span></span>
+        </a>
+        <a class="other" href="purchase-order.html">
+          <div class="other__img"><img src="../images/purchase-order.jpg" alt="" loading="lazy"></div>
+          <span class="textlink">Purchase Order Management <span class="arrow">→</span></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wrap" id="contact">
+    <div class="footer__inner">
+      <div class="footer__spacer"></div>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <p>CONTACT</p>
+          <ul>
+            <li><a href="mailto:darwi92@gmail.com">darwi92@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/honnji/" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

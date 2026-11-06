@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Purchase Order Management · Jihyun Hong</title>
+  <meta name="description" content="Purchase Order Management at Tridge. One standard for purchase orders, designed from the data model and how trade teams work.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="nav__logo" href="../">Jihyun Hong</a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="../#work">Work</a>
+      <a href="../#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="wrap p-title">
+      <div class="p-title__inner">
+        <p class="h5 muted">Tridge</p>
+        <h1 class="h1">Purchase Order Management</h1>
+        <p class="h2">One standard for purchase orders</p>
+      </div>
+    </section>
+
+    <div class="p-cover"><img src="../images/purchase-order-wide.jpg" alt="A person using the purchase order detail page on a laptop."></div>
+
+    <section class="wrap p-summary">
+      <div class="p-summary__main">
+        <div class="p-summary__text">
+        <p class="h3">Purchase orders are the backbone of trade operations, but teams kept them in their own spreadsheets with different formats. The goal was one standard for purchase orders, with shared fields and automated steps that teams could rely on.</p>
+        <p class="h3">I designed the interface on top of the data model, guided by user interviews and observation.</p>
+        </div>
+        <div class="chips">
+          <span class="chip">Contextual Inquiry</span>
+          <span class="chip">Human-in-the-loop AI</span>
+          <span class="chip">Workflow Design</span>
+          <span class="chip">Usability Testing</span>
+        </div>
+      </div>
+      <div class="p-summary__meta">
+        <div><p>Responsibility</p><p class="muted">Led user research and interface design</p></div>
+        <div><p>Team</p><p class="muted">One of two designers in a team of 7<br>with a PM and engineers</p></div>
+        <div><p>Timeline</p><p class="muted">Nov 2024 – Jan 2025</p></div>
+      </div>
+    </section>
+
+    <div class="media media--tight">
+      <div class="frame frame--auto"><img src="../images/po/spreadsheets.png" alt="Spreadsheets that each team kept for purchase orders, each in a different format." loading="lazy"></div>
+    </div>
+
+    <section class="sec sec--key sec--pb40">
+      <div class="sec__inner">
+        <h2 class="sec__title">Problem</h2>
+        <div class="sec__body">
+          <p class="body">Information was listed without hierarchy, hiding the context of each purchase stage. Each team kept its own file version, so data didn't match and operators struggled to track order status in real time.</p>
+          <div class="key">
+            <p class="small muted">Process</p>
+            <p class="h3">The product team set the core data from user observation. Engineers then built the ERD.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec--key">
+      <div class="sec__inner">
+        <h2 class="sec__title">Solution</h2>
+        <div class="sec__body">
+          <p class="h3">Every action on a purchase order is grouped by the part of the workflow it belongs to, from order info and expenses to shipment, B/L and invoice.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="media media--diagram">
+      <div class="frame frame--auto"><img src="../images/po/data-model.png" alt="Concept diagram of the purchase order and the actions attached to each part of it." loading="lazy"></div>
+    </div>
+
+    <section class="sec">
+      <div class="sec__inner">
+        <h2 class="sec__title">Data model</h2>
+        <div class="sec__body">
+          <p class="h3">Designing from the data model</p>
+          <p class="body">Accuracy mattered here. In a work tool, even a small mismatch with how operators think about their work can cause real delays. Our design lead turned the engineers' ERD into a concept diagram for the interface. I reorganised it by workflow and attached each mutation where an interaction belongs.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="media media--diagram">
+      <div class="frame frame--auto"><img src="../images/po/workflow.png" alt="Purchase workflow from negotiation to goods delivery, with operator and manager tasks." loading="lazy"></div>
+    </div>
+
+    <section class="sec">
+      <div class="sec__inner">
+        <h2 class="sec__title">User research</h2>
+        <div class="sec__body">
+          <p class="h3">How trade teams manage purchase orders</p>
+          <p class="body">The data model defined what an order needed to contain. It did not show how people actually worked through it. So I asked operators questions as they worked, held short interviews, recorded their screens and went through their work files. They kept going back to the details agreed at the confirmation and order stage. They jumped between files or opened the same file twice in split windows.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="media media--diagram">
+      <div class="frame frame--auto"><img src="../images/po/wireframe.png" alt="Wireframe that places each mutation inside its section, next to the finished detail page." loading="lazy"></div>
+    </div>
+
+    <section class="sec sec--pb40">
+      <div class="sec__inner">
+        <h2 class="sec__title">Wireframe</h2>
+        <div class="sec__body">
+          <p class="h3">From data model to screen</p>
+          <p class="body">Each entity became a section and each mutation became an action inside it. I placed every action where operators need it in their workflow. Every button on the page matches a real change in the data.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="media media--diagram">
+      <div class="frame"><img src="../images/po/detail.png" alt="Purchase order detail page with order info on the left and transport details on the right." loading="lazy"></div>
+    </div>
+
+    <section class="sec">
+      <div class="sec__inner">
+        <h2 class="sec__title">Detail page</h2>
+        <div class="sec__body">
+          <p class="h3">Placing core order details side by side</p>
+          <p class="body">Operators kept going back to the original purchase order while handling later steps. So I kept it on the left as the master, with post-order details beside it. Users can check the order and enter new data without switching screens.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="media media--diagram">
+      <div class="frame"><img src="../images/po/list.png" alt="Purchase order table with an edit popover for organisational info." loading="lazy"></div>
+    </div>
+
+    <section class="sec">
+      <div class="sec__inner">
+        <h2 class="sec__title">List page</h2>
+        <div class="sec__body">
+          <p class="h3">One table for every trade</p>
+          <p class="body">Operators kept updating details such as negotiation terms, vessel schedules and invoices throughout each trade. I designed an editable, spreadsheet-like table where each cell opens an edit modal that fits its data type. Managers see every trade on one screen.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="media media--diagram">
+      <div class="frame"><img src="../images/po/migration.png" alt="AI data migration with an upload dialog and a preview of draft purchase orders." loading="lazy"></div>
+    </div>
+
+    <section class="sec sec--pb40">
+      <div class="sec__inner">
+        <h2 class="sec__title">AI data migration</h2>
+        <div class="sec__body">
+          <p class="h3">Historical data in one upload</p>
+          <p class="body">Users upload the file they already work in and AI turns it into system records such as purchase orders, products and companies. No technical help is needed. Since this is core trade data, I designed every record to arrive as an editable draft that users check and fix before it is saved.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="sec__inner">
+        <h2 class="sec__title">Usability testing</h2>
+        <div class="sec__body">
+          <p class="h3">Pilot test before full rollout</p>
+          <p class="body">I ran a scenario-based pilot test with two fulfilment team members who manage purchase operations. Both completed a purchase order on their first try, in about five minutes on average. Neither had to search for where to enter data. Once the tool is in daily use, I would track error rate, task time and how often users switch panels.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="others">
+      <h2 class="h1 others__title">Other Projects</h2>
+      <div class="others__grid">
+        <a class="other" href="company-directory.html">
+          <div class="other__img"><img src="../images/company-directory.jpg" alt="" loading="lazy"></div>
+          <span class="textlink">Company Directory <span class="arrow">→</span></span>
+        </a>
+        <a class="other" href="inbox.html">
+          <div class="other__img"><img src="../images/inbox.jpg" alt="" loading="lazy"></div>
+          <span class="textlink">Inbox Notification <span class="arrow">→</span></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wrap" id="contact">
+    <div class="footer__inner">
+      <div class="footer__spacer"></div>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <p>CONTACT</p>
+          <ul>
+            <li><a href="mailto:darwi92@gmail.com">darwi92@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/honnji/" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
