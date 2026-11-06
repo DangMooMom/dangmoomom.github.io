@@ -342,7 +342,8 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
   .sec__inner { gap: 24px; }
   .media { padding-top: 48px; padding-bottom: 48px; }
   .frame, .models { border-radius: 20px; }
-  .split > .frame { width: 100%; }
+  .split > .frame { width: 100%; flex: none; }
+  .split > .split__text, .media__row > .frame, .sec__title, .sec__body, .p-summary__main, .p-summary__meta { flex: none; }
   .models { padding: 48px 16px; gap: 48px; }
   .step { font-size: 14px; padding: 8px 10px; }
   .model__name { font-size: 15px; }
