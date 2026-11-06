@@ -154,6 +154,8 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 }
 .media__row { display: flex; gap: 40px; }
 .media__row > .frame { flex: 1 1 0; min-width: 0; }
+.media__item { flex: 1 1 0; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 24px; }
+.media__item .caption { width: auto; }
 
 /* Image + text side by side */
 .split { display: flex; gap: 80px; align-items: flex-start; }
@@ -371,7 +373,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
   .media { padding-top: 48px; padding-bottom: 48px; }
   .frame, .models { border-radius: 20px; }
   .split > .frame { width: 100%; flex: none; }
-  .split > .split__text, .media__row > .frame, .sec__title, .sec__body, .p-summary__main, .p-summary__meta { flex: none; }
+  .split > .split__text, .media__row > .frame, .media__item, .sec__title, .sec__body, .p-summary__main, .p-summary__meta { flex: none; }
   .models { padding: 48px 16px; gap: 48px; }
   .step { font-size: 14px; padding: 8px 10px; }
   .model__name { font-size: 15px; }
