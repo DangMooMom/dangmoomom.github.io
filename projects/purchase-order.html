@@ -84,9 +84,9 @@
           <h2 class="chapter__title">How trade teams really work</h2>
         </div>
         <div class="chapter__body">
-          <p>Accuracy mattered here. In a work tool, even a small mismatch with how operators think about their work can cause real delays. Our design lead turned the engineers' ERD into a concept diagram for the interface.</p>
-          <p>That diagram defined what an order needed to contain. It did not show how people actually worked through it. So I ran quick, informal research alongside it, asking operators questions as they worked. Short interviews, screen recordings and a look through their work files filled in the rest.</p>
-          <p>Two patterns came up again and again. The recordings showed operators going back to the details agreed at the confirmation and order stage. They jumped between files and tabs, or opened the same file twice in split windows. In interviews, those with many orders said they wanted to see them all at a glance, and managers who approved each step needed that overview too. Yet their spreadsheets kept the information in separate files, so even one small change meant hunting through all of them.</p>
+          <p>Accuracy mattered here, because in a work tool even a small mismatch with how operators think about their work can cause real delays. Our design lead turned the engineers' ERD into a concept diagram for the interface.</p>
+          <p>That diagram defined what an order needed to contain, but not how people actually worked through it. I ran quick and informal research alongside it to fill that gap, asking operators questions as they worked. Short interviews, screen recordings and a look through their work files filled in the rest.</p>
+          <p>Two patterns came up again and again. The recordings showed operators going back to the details agreed at the confirmation and order stage, jumping between files and tabs or opening the same file twice in split windows. In interviews, those with many orders said they wanted to see them all at a glance. Managers who approved each step needed that overview too. Their spreadsheets kept the information in separate files, so even one small change meant hunting through all of them.</p>
         </div>
       </div>
     </section>
@@ -120,8 +120,8 @@
           <h2 class="chapter__title">From data model to screen</h2>
         </div>
         <div class="chapter__body">
-          <p>The wireframe followed the data model. I reorganised the concept diagram by workflow, then turned each entity into a section and each mutation into an action inside it. Every button on the page matches a real change in the data.</p>
-          <p>The research shaped where things sit. Operators kept going back to the original purchase order while handling later steps, so it stays on the left as the master, with post-order details beside it. Users can check the order and enter new data without switching screens. On the list, operators kept updating details such as negotiation terms and vessel schedules throughout each trade. An editable, spreadsheet-like table lets them do that without leaving the list.</p>
+          <p>The wireframe followed the data model. I reorganised the concept diagram by workflow, then turned each entity into a section and each mutation into an action inside it. Every button on the page now matches a real change in the data.</p>
+          <p>The research shaped where things sit. Operators kept going back to the original purchase order while handling later steps. The purchase order now stays on the left as the master with post-order details beside it. Users can check the order and enter new data without switching screens. On the list, operators kept updating details such as negotiation terms and vessel schedules throughout each trade. An editable table that works like a spreadsheet lets them do that without leaving the list.</p>
         </div>
       </div>
     </section>
@@ -144,7 +144,7 @@
     <div class="captions">
       <div class="caption">
         <p class="caption__title">Master and details side by side</p>
-        <p class="caption__body">The original order stays on the left. Product information stays visible after shipment, so users can check related details at every stage.</p>
+        <p class="caption__body">The original order stays on the left. Product information also remains visible after shipment, so users can check related details at every stage.</p>
       </div>
     </div>
 
@@ -155,7 +155,7 @@
     <div class="captions pb120">
       <div class="caption">
         <p class="caption__title">One table for every trade</p>
-        <p class="caption__body">Each cell opens an edit modal that fits its data type. Operators update orders without leaving the list, and managers see every trade on one screen.</p>
+        <p class="caption__body">Each cell opens an edit modal that fits its data type, so operators can update orders without leaving the list while managers see every trade on one screen.</p>
       </div>
     </div>
 
@@ -187,7 +187,7 @@
     <div class="captions pb120">
       <div class="caption">
         <p class="caption__title">Drafts before anything is saved</p>
-        <p class="caption__body">Converted records appear in a preview, grouped by record type. Users review each draft and edit it before saving. Since this is core trade data, a wrong record could cause problems long after the upload. So I designed every record to arrive as an editable draft. Users check and fix it before anything is saved.</p>
+        <p class="caption__body">Converted records appear in a preview, grouped by record type. Since this is core trade data, a wrong record could cause problems long after the upload. I designed every record to arrive as an editable draft that users can check and fix before anything is saved.</p>
       </div>
     </div>
 
@@ -198,8 +198,8 @@
           <h2 class="chapter__title">Pilot test before full rollout</h2>
         </div>
         <div class="chapter__body">
-          <p>Before full rollout, I ran a scenario-based pilot test with two fulfilment team members who manage purchase operations. Both completed a purchase order on their first try, in about five minutes on average. In the spreadsheet-like table, neither had to search for where to enter data, and both entered it without mistakes. Afterwards, both went back to the list and edited orders without help.</p>
-          <p>Once the tool is in daily use, the next step is to measure it in real work. Error logs would show which fields still cause mistakes. Task time and how often users switch panels would show whether the side-by-side layout feels natural.</p>
+          <p>Before full rollout I ran a scenario-based pilot test with two fulfilment team members who manage purchase operations. Both completed a purchase order on their first try, taking about five minutes on average. In the spreadsheet-like table neither had to search for where to enter data, and both entered it without mistakes. Afterwards both went back to the list and edited orders without any help.</p>
+          <p>Once the tool is in daily use, the next step is to measure it in real work. Error logs would show which fields still cause mistakes, while task time and how often users switch panels would show whether the side-by-side layout feels natural.</p>
         </div>
       </div>
     </section>
