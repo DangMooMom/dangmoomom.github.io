@@ -84,7 +84,7 @@
           <h2 class="chapter__title">How trade teams really work</h2>
         </div>
         <div class="chapter__body">
-          <p>Accuracy mattered here, because in a work tool even a small mismatch with how operators think about their work can cause real delays. Our design lead redrew the engineers' ERD as a simpler diagram for the interface.</p>
+          <p>Accuracy mattered here, because a work tool that doesn't match how operators think can slow their work down. Our design lead redrew the engineers' ERD as a simpler diagram for the interface.</p>
           <p>That diagram defined what an order needed to contain, but not how people actually worked through it. I ran quick, informal research alongside it to fill that gap, asking operators questions as they worked. Short interviews, screen recordings and a look through their work files completed the picture.</p>
           <p>Two patterns came up again and again. The recordings showed operators going back to the details agreed at the order stage, jumping between files and tabs or opening the same file twice in split windows. In interviews, those with many orders said they wanted to see them all at a glance. Managers who approved each step needed that overview too. The teams' spreadsheets kept the information in separate files, so even one small change meant hunting through all of them.</p>
         </div>
@@ -120,7 +120,7 @@
           <h2 class="chapter__title">From data model to screen</h2>
         </div>
         <div class="chapter__body">
-          <p>The wireframe followed the data model. Building on that regrouping, I turned each entity into a section and each mutation (a change to the data) into an action inside it. Every button on the page now matches a real change in the data.</p>
+          <p>The wireframe followed the data model. Building on that regrouping, I turned each object into a section and each change to its data into a button inside it. Every button on the page now matches a real change in the data.</p>
           <p>The research shaped where things sit. Operators kept going back to the original purchase order while handling later steps. The original purchase order now stays fixed on the left, with later details such as shipping beside it. Users can check the order and enter new data without switching screens. On the list, operators kept updating details such as negotiation terms and vessel schedules throughout each trade. An editable table that works like a spreadsheet lets them do that without leaving the list.</p>
         </div>
       </div>
@@ -133,7 +133,7 @@
     <div class="captions">
       <div class="caption">
         <p class="caption__title">Wireframe</p>
-        <p class="caption__body">Each mutation sits in the section where its interaction belongs, so the screen mirrors the data model.</p>
+        <p class="caption__body">Each button sits in the section it changes, so the screen mirrors the data model.</p>
       </div>
     </div>
 
@@ -199,7 +199,7 @@
         </div>
         <div class="chapter__body">
           <p>Before full rollout I ran a scenario-based pilot test with two fulfilment team members who manage purchase operations. Both completed a purchase order on their first try, taking about five minutes on average. In the spreadsheet-like table neither had to search for where to enter data, and both entered it without mistakes. Afterwards both went back to the list and edited orders without any help.</p>
-          <p>Once the tool is in daily use, the next step is to measure it in real work. Error logs would show which fields still cause mistakes, while task time and how often users switch panels would show whether the side-by-side layout feels natural. Signals such as scrolling back and modals closed right after opening would show where a step breaks from how operators think about a trade.</p>
+          <p>Once the tool is in daily use, the next step is to measure it in real work. Error logs would point to fields that still cause mistakes. Task time and panel switching would show whether the side-by-side layout works. Scrolling back or closing a modal right after opening it would hint at steps that feel wrong to operators.</p>
         </div>
       </div>
     </section>
