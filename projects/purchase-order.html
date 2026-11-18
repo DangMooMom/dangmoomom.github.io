@@ -35,7 +35,7 @@
       <div class="p-summary__main">
         <div class="p-summary__text">
         <p class="h3">Purchase orders are the backbone of trade operations, but teams kept them in their own spreadsheets with different formats. The goal was one standard for purchase orders, with shared fields and automated steps that teams could rely on.</p>
-        <p class="h3">I designed the interface on top of the data model, guided by user interviews and observation.</p>
+        <p class="h3">I built the interface from the data model, guided by user interviews and observation.</p>
         </div>
         <div class="chips">
           <span class="chip">Contextual Inquiry</span>
@@ -62,7 +62,7 @@
           <p class="body">Information was listed without hierarchy, hiding the context of each purchase stage. Each team kept its own file version, so data didn't match and operators struggled to track order status in real time.</p>
           <div class="key">
             <p class="small muted">Process</p>
-            <p class="h3">The product team set the core data from user observation. Engineers then built the ERD.</p>
+            <p class="h3">The product team set the core data from user observation. Engineers then built the entity relationship diagram (ERD).</p>
           </div>
         </div>
       </div>
@@ -72,7 +72,7 @@
       <div class="sec__inner">
         <h2 class="sec__title">Solution</h2>
         <div class="sec__body">
-          <p class="h3">Every action on a purchase order is grouped by the part of the workflow it belongs to, from order info and expenses to shipment, B/L and invoice.</p>
+          <p class="h3">Every action on a purchase order is grouped by the part of the workflow it belongs to, from order info and expenses to shipping documents and invoices.</p>
         </div>
       </div>
     </section>
@@ -84,9 +84,9 @@
           <h2 class="chapter__title">How trade teams really work</h2>
         </div>
         <div class="chapter__body">
-          <p>Accuracy mattered here, because in a work tool even a small mismatch with how operators think about their work can cause real delays. Our design lead turned the engineers' ERD into a concept diagram for the interface.</p>
-          <p>That diagram defined what an order needed to contain, but not how people actually worked through it. I ran quick and informal research alongside it to fill that gap, asking operators questions as they worked. Short interviews, screen recordings and a look through their work files filled in the rest.</p>
-          <p>Two patterns came up again and again. The recordings showed operators going back to the details agreed at the confirmation and order stage, jumping between files and tabs or opening the same file twice in split windows. In interviews, those with many orders said they wanted to see them all at a glance. Managers who approved each step needed that overview too. Their spreadsheets kept the information in separate files, so even one small change meant hunting through all of them.</p>
+          <p>Accuracy mattered here, because in a work tool even a small mismatch with how operators think about their work can cause real delays. Our design lead turned the engineers' ERD into a data model for the interface.</p>
+          <p>That diagram defined what an order needed to contain, but not how people actually worked through it. I ran quick, informal research alongside it to fill that gap, asking operators questions as they worked. Short interviews, screen recordings and a look through their work files completed the picture.</p>
+          <p>Two patterns came up again and again. The recordings showed operators going back to the details agreed at the confirmation and order stage, jumping between files and tabs or opening the same file twice in split windows. In interviews, those with many orders said they wanted to see them all at a glance. Managers who approved each step needed that overview too. The teams' spreadsheets kept the information in separate files, so even one small change meant hunting through all of them.</p>
         </div>
       </div>
     </section>
@@ -98,7 +98,7 @@
     <div class="captions">
       <div class="caption">
         <p class="caption__title">Data model</p>
-        <p class="caption__body">Our design lead turned the engineers' ERD into a map of the objects operators handle and the actions that change them, with each object's key details attached. I regrouped it by workflow stage, which showed where each action should sit in the interface.</p>
+        <p class="caption__body">The data model maps the objects operators handle and the actions that change them, with each object's key details attached. I regrouped it by workflow stage, which showed where each action should sit in the interface.</p>
       </div>
     </div>
 
@@ -120,8 +120,8 @@
           <h2 class="chapter__title">From data model to screen</h2>
         </div>
         <div class="chapter__body">
-          <p>The wireframe followed the data model. I reorganised the concept diagram by workflow, then turned each entity into a section and each mutation into an action inside it. Every button on the page now matches a real change in the data.</p>
-          <p>The research shaped where things sit. Operators kept going back to the original purchase order while handling later steps. The purchase order now stays on the left as the master with post-order details beside it. Users can check the order and enter new data without switching screens. On the list, operators kept updating details such as negotiation terms and vessel schedules throughout each trade. An editable table that works like a spreadsheet lets them do that without leaving the list.</p>
+          <p>The wireframe followed the data model. Building on that regrouping, I turned each entity into a section and each mutation (a change to the data) into an action inside it. Every button on the page now matches a real change in the data.</p>
+          <p>The research shaped where things sit. Operators kept going back to the original purchase order while handling later steps. The original purchase order now stays fixed on the left, with later details such as shipping beside it. Users can check the order and enter new data without switching screens. On the list, operators kept updating details such as negotiation terms and vessel schedules throughout each trade. An editable table that works like a spreadsheet lets them do that without leaving the list.</p>
         </div>
       </div>
     </section>
@@ -175,7 +175,7 @@
       <div class="split">
         <div class="frame"><img src="../images/po/upload.png" alt="Data migration dialog where users upload their own working file." loading="lazy"></div>
         <div class="split__text">
-          <p class="h4">Users now upload the file they already work in, and AI turns it into system records such as purchase orders, products and companies. No technical help is needed.</p>
+          <p class="h4">Users now upload the file they already work in, and AI turns it into system records such as purchase orders, products and companies. No help from engineers is needed.</p>
         </div>
       </div>
     </div>
@@ -221,7 +221,7 @@
         </a>
         <a class="other" href="inbox.html">
           <div class="other__img"><img src="../images/inbox.jpg" alt="" loading="lazy"></div>
-          <span class="textlink">Inbox Notification <span class="arrow">→</span></span>
+          <span class="textlink">Inbox Notifications <span class="arrow">→</span></span>
         </a>
       </div>
     </section>

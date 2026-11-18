@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Inbox Notification · Jihyun Hong</title>
-  <meta name="description" content="Inbox Notification at Tridge. Notification logic and one inbox that keep everyone in a trade workflow up to date.">
+  <title>Inbox Notifications · Jihyun Hong</title>
+  <meta name="description" content="Inbox Notifications at Tridge. Notification logic and one inbox that keep everyone in a trade workflow up to date.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
     <section class="wrap p-title">
       <div class="p-title__inner">
         <p class="h5 muted">Tridge</p>
-        <h1 class="h1">Inbox Notification</h1>
+        <h1 class="h1">Inbox Notifications</h1>
         <p class="h2">Keeping everyone in the loop</p>
       </div>
     </section>
@@ -55,10 +55,10 @@
       <div class="sec__inner">
         <h2 class="sec__title">Problem</h2>
         <div class="sec__body">
-          <p class="body">Updates got lost across the service, and users found it harder to track what happened where.</p>
+          <p class="body">Updates got lost between features, so users struggled to keep up with changes that affected their work.</p>
           <div class="key">
             <p class="small muted">Approach</p>
-            <p class="h3">Before choosing interface patterns, I defined the notification logic first.</p>
+            <p class="h3">I defined the notification logic before choosing any interface pattern.</p>
           </div>
         </div>
       </div>
@@ -80,8 +80,8 @@
           <h2 class="chapter__title">Logic before interface</h2>
         </div>
         <div class="chapter__body">
-          <p>The service kept adding features that mirrored real trade workflows, and an update in one place often mattered to someone working in another. Notifications had to follow how those workflows connect. Before choosing any interface pattern, I built the notification logic on three questions. Where did it happen? What changed? Who should know? Each answer maps to a backend event trigger, so the same logic can scale as features are added.</p>
-          <p>Linked workflows made this harder. Request for quotation and purchase quotation depend on each other, so one action can matter to the people in charge of both. To handle this, each notification was defined by its object, trigger and recipient before being branched by object state.</p>
+          <p>The service kept adding features that mirrored real trade workflows, and an update in one place often mattered to someone working in another. Notifications had to follow how those workflows connect. Before choosing any interface pattern, I built the notification logic on three questions. Where did it happen? What changed? Who should receive it? Each answer maps to a backend event trigger, so the same logic can scale as features are added.</p>
+          <p>Linked workflows made this harder. Request for quotation and purchase quotation depend on each other, so one action can matter to the people in charge of both. To handle this, each notification is defined by what triggers it and who receives it, then split by the state of its object.</p>
         </div>
       </div>
     </section>
@@ -116,7 +116,7 @@
         </div>
         <div class="chapter__body">
           <p>The notification rules shape every message in the inbox. Each one says who did what and links straight to the task, so users can act on it right away. When workflows are connected, a message links to both tasks. Data masking also hides any details users aren't authorised to see.</p>
-          <p>The service doesn't sync in real time, because an incoming update could overwrite someone's edit in progress. New updates load only when users refresh, and a banner lets them know something has arrived.</p>
+          <p>The inbox doesn't refresh on its own, because an incoming update could overwrite someone's edit in progress. New updates load only when users refresh, and a banner lets them know something has arrived.</p>
         </div>
       </div>
     </section>
@@ -136,10 +136,10 @@
       <div class="chapter__inner">
         <div class="chapter__head">
           <p class="chapter__label">Results</p>
-          <h2 class="chapter__title">Testing accuracy in real scenarios</h2>
+          <h2 class="chapter__title">Testing accuracy in realistic scenarios</h2>
         </div>
         <div class="chapter__body">
-          <p>Access in the system depends on each person's role. I ran a role-play pilot with the project team, each of us acting as a different role in real trade tasks. The goal was to check that every notification reached the right person. Every one followed its trigger and recipient rules and none were missed or sent twice. In shared cases such as quotations, the wording fitted each recipient's role.</p>
+          <p>Access in the system depends on each person's role, so I ran a role-play pilot with the project team. Each of us acted as a different role in real trade tasks. The goal was to check that every notification reached the right person. Every one followed its trigger and recipient rules and none were missed or sent twice. In shared cases such as quotations, the wording fitted each recipient's role.</p>
           <p>With real users, the next step is to measure it in daily work. Clicks from the inbox to the linked task would show how quickly people act, and notifications marked as read without being opened would point to noise. Follow-up interviews would then show whether people still ask colleagues for updates.</p>
         </div>
       </div>
