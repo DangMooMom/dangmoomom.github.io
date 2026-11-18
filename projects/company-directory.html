@@ -259,28 +259,40 @@
 
 
     <div class="media pt0 pb0">
-      <figure class="frame frame--auto chart" role="img" aria-label="Share of Home visitors who reached each step. Home: 100% in August and September. Company list: about 37% in August, about 70% in September. Company profile: about 33% in August, about 61% in September.">
+      <figure class="frame frame--auto chart" role="img" aria-label="Share of Home visitors who reached each step. Home: 100% in August and September. Company list: about 37% in August, about 70% in September. Company profile: about 33% in August, about 61% in September. From Home to the company list, 37% moved on in August and 70% in September. From the list to a profile, about 89% moved on in August and 87% in September.">
         <div class="chart__inner">
-          <div class="chart__head"><p class="chart__title">Share of Home visitors who reached each step</p><div class="chart__legend"><span><i class="sw sw--aug"></i>August</span><span><i class="sw sw--sep"></i>September</span></div></div>
+          <div class="chart__head"><p class="chart__title">Share of Home visitors who reached each step</p><div class="chart__legend"><span><i class="sw sw--aug"></i>August</span><span><i class="sw sw--sep"></i>September</span><span><i class="sw sw--lost"></i>Dropped off</span></div></div>
           <div class="funnel">
             <div class="funnel__step">
               <div class="funnel__bars">
-                <div class="bar"><span class="bar__val">100%</span><i class="bar__fill sw--aug" style="height:100%"></i></div>
-                <div class="bar"><span class="bar__val">100%</span><i class="bar__fill sw--sep" style="height:100%"></i></div>
+                <div class="bar"><i class="bar__fill sw--aug" style="height:100%"><span class="bar__val">100%</span></i></div>
+                <div class="bar"><i class="bar__fill sw--sep" style="height:100%"><span class="bar__val">100%</span></i></div>
               </div>
               <p class="funnel__label">Home</p>
             </div>
-            <div class="funnel__step">
-              <div class="funnel__bars">
-                <div class="bar"><span class="bar__val">37%</span><i class="bar__fill sw--aug" style="height:37%"></i></div>
-                <div class="bar"><span class="bar__val">70%</span><i class="bar__fill sw--sep" style="height:70%"></i></div>
-              </div>
-              <p class="funnel__label">Company list</p>
+            <div class="funnel__link" aria-hidden="true">
+              <span class="funnel__arrow"></span>
+              <span class="funnel__rate"><i class="sw sw--aug"></i>37%</span>
+              <span class="funnel__rate"><i class="sw sw--sep"></i>70%</span>
+              <span class="funnel__note">moved on</span>
             </div>
             <div class="funnel__step">
               <div class="funnel__bars">
-                <div class="bar"><span class="bar__val">33%</span><i class="bar__fill sw--aug" style="height:33%"></i></div>
-                <div class="bar"><span class="bar__val">61%</span><i class="bar__fill sw--sep" style="height:61%"></i></div>
+                <div class="bar"><i class="bar__ghost g--aug" style="height:100%"></i><i class="bar__fill sw--aug" style="height:37%"><span class="bar__val">37%</span></i></div>
+                <div class="bar"><i class="bar__ghost g--sep" style="height:100%"></i><i class="bar__fill sw--sep" style="height:70%"><span class="bar__val">70%</span></i></div>
+              </div>
+              <p class="funnel__label">Company list</p>
+            </div>
+            <div class="funnel__link" aria-hidden="true">
+              <span class="funnel__arrow"></span>
+              <span class="funnel__rate"><i class="sw sw--aug"></i>89%</span>
+              <span class="funnel__rate"><i class="sw sw--sep"></i>87%</span>
+              <span class="funnel__note">moved on</span>
+            </div>
+            <div class="funnel__step">
+              <div class="funnel__bars">
+                <div class="bar"><i class="bar__ghost g--aug" style="height:37%"></i><i class="bar__fill sw--aug" style="height:33%"><span class="bar__val">33%</span></i></div>
+                <div class="bar"><i class="bar__ghost g--sep" style="height:70%"></i><i class="bar__fill sw--sep" style="height:61%"><span class="bar__val">61%</span></i></div>
               </div>
               <p class="funnel__label">Company profile</p>
             </div>
