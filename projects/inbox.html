@@ -81,7 +81,7 @@
         </div>
         <div class="chapter__body">
           <p>The service kept adding features that mirrored real trade workflows, and an update in one place often mattered to someone working in another. Notifications had to follow how those workflows connect. Before choosing any interface pattern, I built the notification logic on three questions. Where did it happen? What changed? Who should receive it? Each answer maps to a backend event trigger, so the same logic can scale as features are added.</p>
-          <p>Linked workflows made this harder. Request for quotation and purchase quotation depend on each other, so one action can matter to the people in charge of both. To handle this, each notification is defined by what triggers it and who receives it, then split by the state of its object.</p>
+          <p>Linked workflows made this harder. A request for quotation (RFQ) holds what a buyer wants, and a purchase quotation (PQ) is the price a supplier offers. The two depend on each other, so one action can matter to the people in charge of both. To handle this, each notification is defined by what triggers it and who receives it, then split by the state of its object.</p>
         </div>
       </div>
     </section>
@@ -104,7 +104,7 @@
     <div class="captions pb120">
       <div class="caption">
         <p class="caption__title">28 cases in one workflow</p>
-        <p class="caption__body">For example, allocating a purchase quotation to a request notifies the people in charge of both. Every possible combination was mapped in a spreadsheet and narrowed down to 28 cases for the purchase quotation workflow alone.</p>
+        <p class="caption__body">For example, linking a PQ to an RFQ notifies the people in charge of both. Every possible combination was mapped in a spreadsheet and narrowed down to 28 cases for the purchase quotation workflow alone.</p>
       </div>
     </div>
 
