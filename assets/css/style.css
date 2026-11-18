@@ -414,8 +414,8 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 .bar__ghost { position: absolute; left: 0; bottom: 0; width: 100%; border-radius: 4px 4px 0 0; }
 .sw--lost { opacity: .6; outline: 1px solid var(--surface-border); outline-offset: -1px; }
 .funnel { align-items: flex-start; }
-.funnel__link { flex: 0 0 88px; height: 280px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px; font-size: 14px; color: var(--text); }
-.funnel__arrow { width: 100%; height: 1px; background: var(--text-muted); position: relative; margin-bottom: 8px; }
+.funnel__link { flex: 0 0 56px; height: 280px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px; font-size: 14px; color: var(--text); }
+.funnel__arrow { width: 100%; height: 1px; background: var(--text-muted); position: relative; }
 .funnel__arrow::after { content: ""; position: absolute; right: 0; top: -4px; border: 4.5px solid transparent; border-left: 7px solid var(--text-muted); border-right: 0; }
 .funnel__rate { display: inline-flex; align-items: center; gap: 6px; }
 .funnel__rate .sw { width: 8px; height: 8px; border-radius: 2px; }
@@ -444,7 +444,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
   .funnel__bars { height: 200px; padding-top: 22px; }
   .funnel .bar__val { font-size: 12px; margin-bottom: 6px; }
   .bar { width: 30px; }
-  .funnel__link { flex-basis: 40px; height: 200px; font-size: 12px; gap: 4px; }
+  .funnel__link { flex-basis: 24px; height: 200px; font-size: 12px; gap: 4px; }
   .funnel__note { display: none; }
   .funnel__rate { gap: 4px; }
   .funnel__rate .sw { width: 6px; height: 6px; }
