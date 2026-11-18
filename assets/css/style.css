@@ -285,8 +285,6 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 .acc__body > * { transition: opacity .3s ease .05s, transform .4s var(--ease) .05s; }
 .acc:not([open]) .acc__body > *, .acc.is-closing .acc__body > * { opacity: 0; transform: translateY(-4px); }
 
-/* Chips */
-
 /* Carousel */
 .carousel__btn { transition: border-color .2s ease, background .2s ease, color .2s ease, transform .15s ease; }
 .carousel__btn:hover:not(:disabled) { background: var(--text); color: #fff; border-color: var(--text); }
